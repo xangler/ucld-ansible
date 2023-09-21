@@ -1,0 +1,6 @@
+---
+# vars file for nginx
+flag: none
+app_name: demo
+app_name_suffix: k8s
+app_namespace: default

@@ -1,0 +1,23 @@
+---
+# tasks file for nginx
+- include: action.yml
+  with_items:
+    - name: demo
+    - name: ag
+  loop_control:
+    loop_var: nitem
+
+- name: Start Nginx
+  command: echo "task start nginx"
+  notify:
+  - Start Nginx {{app_name}}
+  when:
+  - flag == 'start'
+
+- name: Close Nginx
+  command: echo "task close nginx"
+  notify:
+  - Close Nginx
+  when:
+  - flag == 'close'
+

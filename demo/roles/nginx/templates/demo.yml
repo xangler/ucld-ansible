@@ -1,0 +1,4 @@
+---
+check: demo
+name: {{ app_name }}-{{ app_name_suffix }}
+namespace: {{ app_namespace }}

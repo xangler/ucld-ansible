@@ -1,0 +1,9 @@
+---
+# handlers file for nginx
+- name: Start Nginx {{app_name}}
+  template:
+    src: demo.yml
+    dest: "{{ lookup('env','HOME') }}"
+
+- name: Close Nginx
+  command: cat "{{ lookup('env','HOME') }}"/demo.yml && rm -rf "{{ lookup('env','HOME') }}"/demo.yml

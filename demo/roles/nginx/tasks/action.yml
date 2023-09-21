@@ -1,0 +1,3 @@
+---
+- name: zecho
+  command: echo {{ nitem.name }}

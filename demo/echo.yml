@@ -1,0 +1,14 @@
+---
+#hosts should been "all" or "web"
+- hosts: web
+  connection: local
+  gather_facts: False
+  tasks:
+  - name: EchoNext
+    shell: echo demo
+    notify:
+    - sdemo
+  handlers:
+  - name: sdemo
+    shell: echo sdemo
+

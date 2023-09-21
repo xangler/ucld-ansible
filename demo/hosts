@@ -1,0 +1,2 @@
+[web]
+controller ansible_host=127.0.0.1  ansible_user=demo ansible_password=demo

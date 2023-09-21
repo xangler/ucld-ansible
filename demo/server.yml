@@ -1,0 +1,7 @@
+---
+- hosts: web
+  connection: local
+  roles:
+    - { role: nginx}
+    # - { role: nginx, flag: 'start'}
+    # - { role: nginx, flag: 'close'}
